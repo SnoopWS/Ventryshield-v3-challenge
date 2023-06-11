@@ -1,0 +1,25 @@
+<html lang="en" class="dark"><head>
+<meta charset="utf-8">
+<link rel="icon" href="/ventryshield.net/assets/icons/logo.png">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="content-security-policy" content=" ">
+<script defer="" referrerpolicy="origin" src="/ventryshield/contents.js?z=jtdcjtiyzxhly3v0zwqlmjilm0elnuilnuqlmkmlmjj0jtiyjtnbjtiysg9tzsuymc0lmjbwzw50cnltagllbgqlmjilmkmlmjj4jtiyjtnbmc40otg0otkznze2odq5nja2jtjdjtiydyuymiuzqte5mjilmkmlmjjojtiyjtnbotg4jtjdjtiyaiuymiuzqtk4myuyqyuymmulmjilm0exotiwjtjdjtiybcuymiuzqsuymmh0dhbzjtnbjtjgjtjgdmvudhj5c2hpzwxklm5ldcuyriuymiuyqyuymnilmjilm0elmjilmjilmkmlmjjrjtiyjtnbmjqlmkmlmjjujtiyjtnbjtiyvvrgltglmjilmkmlmjjvjtiyjtnbmjqwjtjdjtiycsuymiuzqsu1qiu1rcu3ra=="></script><script nonce="6782a5a5-11c6-4b04-b964-9522369bc82f">(function(w,d){!function(dK,dL,dM,dN){dK[dM]=dK[dM]||{};dK[dM].executed=[];dK.zaraz={deferred:[],listeners:[]};dK.zaraz.q=[];dK.zaraz._f=function(dO){return function(){var dP=Array.prototype.slice.call(arguments);dK.zaraz.q.push({m:dO,a:dP})}};for(const dQ of["track","set","debug"])dK.zaraz[dQ]=dK.zaraz._f(dQ);dK.zaraz.init=()=>{var dR=dL.getElementsByTagName(dN)[0],dS=dL.createElement(dN),dT=dL.getElementsByTagName("title")[0];dT&&(dK[dM].t=dL.getElementsByTagName("title")[0].text);dK[dM].x=Math.random();dK[dM].w=dK.screen.width;dK[dM].h=dK.screen.height;dK[dM].j=dK.innerHeight;dK[dM].e=dK.innerWidth;dK[dM].l=dK.location.href;dK[dM].r=dL.referrer;dK[dM].k=dK.screen.colorDepth;dK[dM].n=dL.characterSet;dK[dM].o=(new Date).getTimezoneOffset();if(dK.dataLayer)for(const dX of Object.entries(Object.entries(dataLayer).reduce(((dY,dZ)=>({...dY[1],...dZ[1]})),{})))zaraz.set(dX[0],dX[1],{scope:"page"});dK[dM].q=[];for(;dK.zaraz.q.length;){const d_=dK.zaraz.q.shift();dK[dM].q.push(d_)}dS.defer=!0;for(const ea of[localStorage,sessionStorage])Object.keys(ea||{}).filter((ec=>ec.startsWith("_zaraz_"))).forEach((eb=>{try{dK[dM]["z_"+eb.slice(7)]=JSON.parse(ea.getItem(eb))}catch{dK[dM]["z_"+eb.slice(7)]=ea.getItem(eb)}}));dS.referrerPolicy="origin";dS.src="/ventryshield/contents.js?z="+btoa(encodeURIComponent(JSON.stringify(dK[dM])));dR.parentNode.insertBefore(dS,dR)};["complete","interactive"].includes(dL.readyState)?zaraz.init():dK.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script><link rel="modulepreload" as="script" crossorigin="" href="/ventryshield.net/_app/immutable/nodes/1.04295456.js"><script>((() => {
+    const origOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+        this.addEventListener('load', function () {
+            if (this.getResponseHeader("ventryshield-rq") && this.getResponseHeader("ventryshield-rq") === "igcacnstr") {
+                window.location.reload();
+            }
+        });
+        origOpen.apply(this, arguments);
+    };
+}))();</script><script>const {fetch: originalFetch} = window;
+window.fetch = async (...args) => {
+    let [resource, config] = args;
+    const response = await originalFetch(resource, config);
+    if (response.headers.get("ventryshield-rq") && response.headers.get("ventryshield-rq") === "igcacnstr") {
+        window.location.reload();
+    }
+    return response;
+};</script></head>
+></html>
